@@ -2,4 +2,5 @@ wheel==0.24.0
 hazm
 Flask
 Flask-Restful
+Flask-Cache
 lxml
