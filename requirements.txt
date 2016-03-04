@@ -3,3 +3,4 @@ hazm
 Flask
 Flask-Restful
 lxml
+python-memcached

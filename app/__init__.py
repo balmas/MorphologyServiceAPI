@@ -52,7 +52,7 @@ Setup cache for storing analysis, Memcache recomended form of caching but if una
 #simplecache setup
 cache = SimpleCache()
 #memcache setup
-cache = MemcachedCache(["Enter_memcache_server_Ip_here"])
+#cache = MemcachedCache(["Enter_memcache_server_Ip_here"])
 
 model_path = os.path.dirname(__file__)
 
@@ -341,7 +341,7 @@ def casltoalphioes():
 class EngineListAPI(Resource):
     def get(self):
         cached_enginelist = cache.get("engine_list")
-        if cached_enginelist is None
+        if cached_enginelist is None:
             root = etree.Element("EngineListXMLRepresentation")
             ouput = etree.ElementTree(root)
             listmeta = etree.SubElement(root, "listMetadata", {'type':'bsp:listMetadataType'})
